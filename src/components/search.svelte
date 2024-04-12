@@ -1,9 +1,29 @@
 <script lang="ts">
-  import { SearchIcon } from 'lucide-svelte';
+  import { inputStyles } from '@/ui/styles';
+  import { Command, SearchIcon } from 'lucide-svelte';
   export let searchTerm: string;
   export let placeholder: string = 'Search...';
   export let clearSearch: () => void;
-  import X from 'phosphor-svelte/lib/X';
+  import { X } from 'lucide-svelte';
+
+  let inputElement;
+
+  function focusInput(node: HTMLElement) {
+    const handleKeydown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+        event.preventDefault();
+        node.focus();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeydown);
+
+    return {
+      destroy() {
+        window.removeEventListener('keydown', handleKeydown);
+      }
+    };
+  }
 </script>
 
 <div class="sticky top-[63px] z-50">
@@ -17,9 +37,11 @@
       type="text"
       {placeholder}
       autocomplete="off"
-      class="w-full border-b border-neutral-300 bg-white p-3 pl-11 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:border-neutral-800 dark:bg-neutral-900 dark:focus:ring-neutral-700"
+      class={inputStyles}
       bind:value={searchTerm}
       on:input
+      use:focusInput
+      bind:this={inputElement}
     />
     {#if searchTerm.length > 0}
       <div class="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -30,6 +52,13 @@
         >
           <X size={18} />
         </button>
+      </div>
+    {:else}
+      <div class="absolute inset-y-0 right-0 flex items-center pr-4 text-neutral-500">
+        <div class="flex h-full items-center pointer-events-none gap-x-1 font-mono">
+          <Command size={16} />
+          <span>K</span>
+        </div>
       </div>
     {/if}
   </div>

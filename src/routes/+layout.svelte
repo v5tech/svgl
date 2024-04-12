@@ -4,16 +4,13 @@
 
   // Global styles:
   import '../app.css';
+  import { ModeWatcher, mode } from 'mode-watcher';
 
   // Get categories:
   import { svgs } from '@/data/svgs';
   const categories = svgs
-    .map((svg) => svg.category)
+    .flatMap((svg) => (Array.isArray(svg.category) ? svg.category : [svg.category]))
     .filter((category, index, array) => array.indexOf(category) === index);
-
-  // Icons:
-  import Heart from 'phosphor-svelte/lib/Heart';
-  import { ArrowUpRight } from 'lucide-svelte';
 
   // Toaster:
   import { Toaster } from 'svelte-sonner';
@@ -27,6 +24,7 @@
   import { cn } from '@/utils/cn';
 </script>
 
+<ModeWatcher />
 <Navbar currentPath={data.pathname} />
 <main>
   <aside
@@ -75,12 +73,13 @@
     </Transition>
     <Toaster
       position="bottom-right"
+      theme={$mode}
+      class="toaster group"
       toastOptions={{
-        class: 'font-sans',
-        descriptionClass: 'font-mono',
-        style: `background-color: #262626;
-           color: #ffff; 
-           border-radius: 0.4rem; border: 1px solid #121212;`
+        classes: {
+          toast: 'group toast dark:group-[.toaster]:bg-neutral-900 group-[.toaster]:font-sans',
+          description: 'group-[.toast]:text-xs font-mono'
+        }
       }}
     />
   </div>

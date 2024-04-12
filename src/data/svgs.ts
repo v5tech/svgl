@@ -8,6 +8,13 @@ export const svgs: iSVG[] = [
     url: 'https://discord.com/'
   },
   {
+    title: 'Aliexpress',
+    category: 'Software',
+    route: '/library/aliexpress-icon.svg',
+    wordmark: '/library/aliexpress-logo.svg',
+    url: 'https://aliexpress.com/'
+  },
+  {
     title: 'Github',
     category: 'Software',
     route: '/library/github.svg',
@@ -24,15 +31,6 @@ export const svgs: iSVG[] = [
     category: 'Library',
     route: '/library/react.svg',
     url: 'https://reactjs.org/'
-  },
-  {
-    title: 'Vercel',
-    category: 'Hosting',
-    route: {
-      light: '/library/vercel.svg',
-      dark: '/library/vercel_dark.svg'
-    },
-    url: 'https://vercel.com/'
   },
   {
     title: 'Svelte',
@@ -59,12 +57,6 @@ export const svgs: iSVG[] = [
     url: 'https://nuxtjs.org/'
   },
   {
-    title: 'Nextjs',
-    category: 'Framework',
-    route: '/library/nextjs.svg',
-    url: 'https://nextjs.org/'
-  },
-  {
     title: 'Visual Studio Code',
     category: 'Software',
     route: '/library/vscode.svg',
@@ -77,16 +69,16 @@ export const svgs: iSVG[] = [
     url: 'https://ton.org/'
   },
   {
+    title: 'Locofy',
+    category: 'AI',
+    route: '/library/locofy.svg',
+    url: 'https://www.locofy.ai/'
+  },
+  {
     title: 'Runway',
     category: 'AI',
     route: '/library/runway.svg',
     url: 'https://runwayml.com/'
-  },
-  {
-    title: 'Sentry',
-    category: 'Software',
-    route: '/library/sentry.svg',
-    url: 'https://sentry.io/'
   },
   {
     title: 'Yarn',
@@ -114,8 +106,9 @@ export const svgs: iSVG[] = [
   },
   {
     title: 'Spotify',
-    category: 'Software',
+    category: 'Music',
     route: '/library/spotify.svg',
+    wordmark: '/library/spotify_wordmark.svg',
     url: 'https://www.spotify.com/'
   },
   {
@@ -141,6 +134,12 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/postman.svg',
     url: 'https://www.getpostman.com/'
+  },
+  {
+    title: 'Discord.js',
+    category: 'Library',
+    route: '/library/djs.svg',
+    url: 'https://discord.js.org/'
   },
   {
     title: 'OpenSea',
@@ -191,12 +190,6 @@ export const svgs: iSVG[] = [
     url: 'https://twitter.com/'
   },
   {
-    title: 'Node.js',
-    category: 'Library',
-    route: '/library/nodejs.svg',
-    url: 'https://nodejs.org/'
-  },
-  {
     title: 'Esbuild',
     category: 'Compiler',
     route: '/library/esbuild.svg',
@@ -236,8 +229,8 @@ export const svgs: iSVG[] = [
     url: 'https://www.sublimetext.com/'
   },
   {
-    title: 'TurboRepo',
-    category: 'Library',
+    title: 'Turborepo',
+    category: ['Library', 'Vercel'],
     route: '/library/turborepo.svg',
     url: 'https://turborepo.org/'
   },
@@ -281,6 +274,7 @@ export const svgs: iSVG[] = [
     title: 'YouTube',
     category: 'Social',
     route: '/library/youtube.svg',
+    wordmark: '/library/youtube-wordmark.svg',
     url: 'https://www.youtube.com/'
   },
   {
@@ -296,6 +290,7 @@ export const svgs: iSVG[] = [
     title: 'Google',
     category: 'Social',
     route: '/library/google.svg',
+    wordmark: '/library/google-wordmark.svg',
     url: 'https://www.google.com/'
   },
   {
@@ -377,6 +372,7 @@ export const svgs: iSVG[] = [
     title: 'MongoDB',
     category: 'Database',
     route: '/library/mongodb.svg',
+    wordmark: '/library/mongodb-wordmark.svg',
     url: 'https://www.mongodb.com/'
   },
   {
@@ -500,16 +496,20 @@ export const svgs: iSVG[] = [
     url: 'https://qwik.builder.io/'
   },
   {
+    title: 'Coinbase',
+    category: 'Crypto',
+    route: '/library/coinbase.svg',
+    wordmark: {
+      light: '/library/coinbase-wordmark-light.svg',
+      dark: '/library/coinbase-wordmark-dark.svg'
+    },
+    url: 'https://www.coinbase.com/'
+  },
+  {
     title: 'Authy',
     category: 'Software',
     route: '/library/authy.svg',
     url: 'https://authy.com/'
-  },
-  {
-    title: 'Notion',
-    category: 'Software',
-    route: '/library/notion.svg',
-    url: 'https://notion.so/'
   },
   {
     title: 'NestJS',
@@ -701,6 +701,12 @@ export const svgs: iSVG[] = [
     url: 'https://flutter.dev/'
   },
   {
+    title: 'Auth0',
+    category: 'Library',
+    route: '/library/auth0.svg',
+    url: 'https://auth0.com/'
+  },
+  {
     title: 'Fresh',
     category: 'Framework',
     route: '/library/fresh.svg',
@@ -801,6 +807,15 @@ export const svgs: iSVG[] = [
     category: 'Framework',
     route: '/library/reactquery.svg',
     url: 'https://tanstack.com/query/v4'
+  },
+  {
+    title: 'Devto',
+    category: 'Community',
+    route: {
+      light: '/library/devto-light.svg',
+      dark: '/library/devto-dark.svg'
+    },
+    url: 'https://dev.to/'
   },
   {
     title: 'Redis',
@@ -908,6 +923,12 @@ export const svgs: iSVG[] = [
     url: 'https://reactrouter.com/en/main'
   },
   {
+    title: 'AMP',
+    category: 'Library',
+    route: '/library/amp.svg',
+    url: 'https://amp.dev/'
+  },
+  {
     title: 'Developer Student Club',
     category: 'Community',
     route: '/library/gdsc.svg',
@@ -924,6 +945,15 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/eclipse.svg',
     url: 'https://www.eclipse.org/'
+  },
+  {
+    title: 'Three.js',
+    category: 'Library',
+    route: {
+      light: '/library/threejs-light.svg',
+      dark: '/library/threejs-dark.svg'
+    },
+    url: 'https://threejs.org/'
   },
   {
     title: 'HTML5',
@@ -953,12 +983,6 @@ export const svgs: iSVG[] = [
     url: 'https://www.apple.com'
   },
   {
-    title: 'Android',
-    category: 'Software',
-    route: '/library/android.svg',
-    url: 'https://www.android.com/'
-  },
-  {
     title: 'Windows',
     category: 'Software',
     route: '/library/windows.svg',
@@ -971,6 +995,12 @@ export const svgs: iSVG[] = [
     url: 'https://www.python.org/'
   },
   {
+    title: 'Solidity',
+    category: 'Language',
+    route: '/library/solidity.svg',
+    url: 'https://soliditylang.org/'
+  },
+  {
     title: 'Turbopack',
     category: 'Software',
     route: '/library/turbopack.svg',
@@ -981,6 +1011,12 @@ export const svgs: iSVG[] = [
     category: 'CMS',
     route: '/library/builder.svg',
     url: 'https://builder.io/'
+  },
+  {
+    title: 'Babel',
+    category: 'Compiler',
+    route: '/library/babel.svg',
+    url: 'https://babeljs.io/'
   },
   {
     title: 'Surrealdb',
@@ -1061,6 +1097,12 @@ export const svgs: iSVG[] = [
     url: 'https://www.hcaptcha.com/'
   },
   {
+    title: 'Appwrite',
+    category: 'Software',
+    route: '/library/appwrite.svg',
+    url: 'https://appwrite.io/'
+  },
+  {
     title: 'Loom',
     category: 'Software',
     route: '/library/loom.svg',
@@ -1082,6 +1124,12 @@ export const svgs: iSVG[] = [
     url: 'https://stackblitz.com/'
   },
   {
+    title: 'Binance',
+    category: 'Crypto',
+    route: '/library/binance.svg',
+    url: 'https://binance.com/'
+  },
+  {
     title: 'Messenger',
     category: 'Social',
     route: '/library/messenger.svg',
@@ -1101,7 +1149,7 @@ export const svgs: iSVG[] = [
   },
   {
     title: 'WordPress',
-    category: 'Software',
+    category: ['Software', 'CMS'],
     route: '/library/wordpress.svg',
     url: 'https://wordpress.org/'
   },
@@ -1116,6 +1164,15 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/elementor.svg',
     url: 'https://elementor.com/'
+  },
+  {
+    title: 'Kick',
+    category: 'Entertainment',
+    route: {
+      light: '/library/kick-light.svg',
+      dark: '/library/kick-dark.svg'
+    },
+    url: 'https://kick.com/'
   },
   {
     title: 'Prime video',
@@ -1253,6 +1310,12 @@ export const svgs: iSVG[] = [
     url: 'https://zod.dev/'
   },
   {
+    title: 'Dreamweaver',
+    category: 'Software',
+    route: '/library/dw.svg',
+    url: 'https://www.adobe.com/products/dreamweaver.html'
+  },
+  {
     title: 'OpenAI',
     category: 'AI',
     route: {
@@ -1290,12 +1353,6 @@ export const svgs: iSVG[] = [
     category: 'Database',
     route: '/library/sql-server.svg',
     url: 'https://www.microsoft.com/en-us/sql-server/'
-  },
-  {
-    title: 'Biomejs',
-    category: 'Compiler',
-    route: '/library/biomejs.svg',
-    url: 'https://biomejs.dev/'
   },
   {
     title: 'Hono',
@@ -1340,6 +1397,15 @@ export const svgs: iSVG[] = [
     url: 'https://crossplane.io/'
   },
   {
+    title: 'Volta',
+    category: 'Software',
+    route: {
+      light: '/library/volta-dark.svg',
+      dark: '/library/volta-light.svg'
+    },
+    url: 'https://volta.net/'
+  },
+  {
     title: 'Typesense',
     category: 'Software',
     route: '/library/typesense.svg',
@@ -1382,15 +1448,13 @@ export const svgs: iSVG[] = [
     url: 'https://www.bnbchain.org/'
   },
   {
-    title: 'TRON',
-    category: 'Crypto',
-    route: '/library/trx.svg',
-    url: 'https://tron.network/'
-  },
-  {
-    title: 'Chainlink',
+    title: 'Link',
     category: 'Crypto',
     route: '/library/link.svg',
+    wordmark: {
+      light: '/library/link-wordmark-light.svg',
+      dark: '/library/link-wordmark-dark.svg'
+    },
     url: 'https://chain.link/'
   },
   {
@@ -1466,7 +1530,7 @@ export const svgs: iSVG[] = [
     title: 'Premiere',
     category: 'Design',
     route: '/library/premiere.svg',
-    url: 'https://x.com'
+    url: 'https://www.adobe.com/es/products/premiere'
   },
   {
     title: 'VK',
@@ -1484,6 +1548,7 @@ export const svgs: iSVG[] = [
     title: 'Dub',
     category: 'Software',
     route: '/library/dub.svg',
+    wordmark: '/library/dub-wordmark.svg',
     url: 'https://dub.co'
   },
   {
@@ -1518,6 +1583,12 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/datadog.svg',
     url: 'https://www.datadoghq.com/'
+  },
+  {
+    title: 'Tron',
+    category: 'Crypto',
+    route: '/library/tron.svg',
+    url: 'https://tron.network/'
   },
   {
     title: 'Randevum',
@@ -1620,12 +1691,6 @@ export const svgs: iSVG[] = [
       dark: '/library/cal_dark.svg'
     },
     url: 'https://cal.com'
-  },
-  {
-    title: 'Midday.ai',
-    category: 'Software',
-    route: '/library/midday.svg',
-    url: 'https://midday.ai'
   },
   {
     title: 'Calendly',
@@ -1784,6 +1849,10 @@ export const svgs: iSVG[] = [
       dark: '/library/axiom-dark.svg',
       light: '/library/axiom-light.svg'
     },
+    wordmark: {
+      light: '/library/axiom-wordmark-light.svg',
+      dark: '/library/axiom-wordmark-dark.svg'
+    },
     url: 'https://axiom.co/'
   },
   {
@@ -1798,6 +1867,10 @@ export const svgs: iSVG[] = [
     route: {
       light: '/library/zeabur-light.svg',
       dark: '/library/zeabur-dark.svg'
+    },
+    wordmark: {
+      light: '/library/zeabur_wordmark_light.svg',
+      dark: '/library/zeabur_wordmark_dark.svg'
     },
     url: 'https://zeabur.com/'
   },
@@ -1935,7 +2008,7 @@ export const svgs: iSVG[] = [
   },
   {
     title: 'MonkeyType',
-    category: 'Typing',
+    category: 'Software',
     route: '/library/monkeytype.svg',
     url: 'https://monkeytype.com/'
   },
@@ -1949,6 +2022,10 @@ export const svgs: iSVG[] = [
     title: 'Shopify',
     category: 'CMS',
     route: '/library/shopify.svg',
+    wordmark: {
+      dark: '/library/shopify-wordmark-dark.svg',
+      light: '/library/shopify-wordmark-light.svg'
+    },
     url: 'https://www.shopify.com'
   },
   {
@@ -1958,13 +2035,7 @@ export const svgs: iSVG[] = [
     url: 'https://www.webflow.com'
   },
   {
-    title: 'bigcommerce',
-    category: 'CMS',
-    route: '/library/bigcommerce.svg',
-    url: 'https://www.bigcommerce.co.uk'
-  },
-  {
-    title: 'sanity',
+    title: 'Sanity',
     category: 'CMS',
     route: '/library/sanity.svg',
     url: 'https://www.sanity.io'
@@ -1976,55 +2047,60 @@ export const svgs: iSVG[] = [
     url: 'https://www.sky.com'
   },
   {
-    title: 'airbnb',
+    title: 'Airbnb',
     category: 'Software',
     route: '/library/airbnb.svg',
+    wordmark: '/library/airbnb-wordmark.svg',
     url: 'https://www.airbnb.com'
   },
   {
-    title: 'uber',
+    title: 'Uber',
     category: 'Software',
-    route: '/library/uber.svg',
+    route: {
+      light: '/library/uber_light.svg',
+      dark: '/library/uber_dark.svg'
+    },
     url: 'https://www.uber.com'
   },
   {
-    title: 'gmail',
+    title: 'Gmail',
     category: 'Software',
     route: '/library/gmail.svg',
     url: 'https://www.gmail.com'
   },
   {
-    title: 'outlook',
+    title: 'Outlook',
     category: 'Software',
     route: '/library/outlook.svg',
     url: 'https://www.outlook.com'
   },
   {
-    title: 'slack',
+    title: 'Slack',
     category: 'Software',
     route: '/library/slack.svg',
+    wordmark: '/library/slack-wordmark.svg',
     url: 'https://www.slack.com'
   },
   {
-    title: 'snapchat',
+    title: 'Snapchat',
     category: 'Software',
     route: '/library/snapchat.svg',
     url: 'https://www.snapchat.com'
   },
   {
-    title: 'ebay',
+    title: 'Ebay',
     category: 'Software',
     route: '/library/ebay.svg',
     url: 'https://www.ebay.com'
   },
   {
-    title: 'ibm',
+    title: 'IBM',
     category: 'Software',
     route: '/library/ibm.svg',
     url: 'https://www.ibm.com'
   },
   {
-    title: 'trustpilot',
+    title: 'TrustPilot',
     category: 'Software',
     route: '/library/trustpilot.svg',
     url: 'https://www.trustpilot.com'
@@ -2033,6 +2109,10 @@ export const svgs: iSVG[] = [
     title: 'Raycast',
     category: 'Software',
     route: '/library/raycast.svg',
+    wordmark: {
+      light: '/library/raycast-wordmark-light.svg',
+      dark: '/library/raycast-wordmark-dark.svg'
+    },
     url: 'https://raycast.com/'
   },
   {
@@ -2108,6 +2188,10 @@ export const svgs: iSVG[] = [
       light: '/library/pnpm.svg',
       dark: '/library/pnpm_dark.svg'
     },
+    wordmark: {
+      light: '/library/pnpm_wordmark_light.svg',
+      dark: '/library/pnpm_wordmark_dark.svg'
+    },
     url: 'https://pnpm.io/'
   },
   {
@@ -2165,6 +2249,19 @@ export const svgs: iSVG[] = [
     url: 'https://1password.com'
   },
   {
+    title: 'Flask',
+    category: 'Framework',
+    route: {
+      light: '/library/flask-light.svg',
+      dark: '/library/flask-dark.svg'
+    },
+    wordmark: {
+      light: '/library/flask-wordmark-light.svg',
+      dark: '/library/flask-wordmark-dark.svg'
+    },
+    url: 'https://flask.palletsprojects.com/'
+  },
+  {
     title: 'Alacritty',
     category: 'Software',
     route: '/library/alacritty.svg',
@@ -2181,5 +2278,305 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/bitwarden.svg',
     url: 'https://bitwarden.com/'
+  },
+  {
+    title: 'Voicemod',
+    category: 'Entertainment',
+    route: {
+      light: '/library/voicemod_light.svg',
+      dark: '/library/voicemod_dark.svg'
+    },
+    url: 'https://voicemod.net/'
+  },
+  {
+    title: 'Neovim',
+    category: 'Software',
+    route: '/library/neovim.svg',
+    url: 'https://neovim.io/'
+  },
+  {
+    title: 'Pitch',
+    category: 'Design',
+    route: '/library/pitch.svg',
+    url: 'https://pitch.com'
+  },
+  {
+    title: 'Biomejs',
+    category: 'Compiler',
+    route: '/library/biomejs.svg',
+    url: 'https://biomejs.dev/'
+  },
+  {
+    title: 'Gradio',
+    category: 'Software',
+    route: '/library/gradio.svg',
+    url: 'https://www.gradio.app/'
+  },
+  {
+    title: 'Meta',
+    category: 'Social',
+    route: '/library/meta.svg',
+    url: 'https://about.meta.com/es/'
+  },
+  {
+    title: 'Stability AI',
+    category: 'AI',
+    route: '/library/stability-ai.svg',
+    url: 'https://stability.ai/'
+  },
+  {
+    title: 'Google PaLM',
+    category: 'AI',
+    route: '/library/google-palm.svg',
+    url: 'https://ai.google/discover/palm2/'
+  },
+  {
+    title: 'Android',
+    category: 'Software',
+    route: '/library/android-icon.svg',
+    url: 'https://www.android.com/'
+  },
+  {
+    title: 'Sentry',
+    category: 'Software',
+    route: '/library/sentry.svg',
+    url: 'https://sentry.io/'
+  },
+  {
+    title: 'Grafana',
+    category: 'Software',
+    route: '/library/grafana.svg',
+    url: 'https://grafana.com/'
+  },
+  {
+    title: 'Notion',
+    category: 'Software',
+    route: '/library/notion.svg',
+    url: 'https://notion.so/'
+  },
+  {
+    title: 'Litecoin',
+    category: 'Crypto',
+    route: '/library/litecoin.svg',
+    url: 'https://litecoin.org/'
+  },
+  {
+    title: 'ElysiaJS',
+    category: 'Framework',
+    route: '/library/elysiajs.svg',
+    url: 'https://elysiajs.com/'
+  },
+  {
+    title: 'TensorFlow',
+    category: 'Library',
+    route: '/library/tensorflow.svg',
+    url: 'https://www.tensorflow.org/'
+  },
+  {
+    title: 'Midday',
+    category: 'AI',
+    route: '/library/midday.svg',
+    url: 'https://midday.ai/'
+  },
+  {
+    title: 'C#',
+    category: 'Language',
+    route: '/library/csharp.svg',
+    url: 'https://dotnet.microsoft.com/languages/csharp'
+  },
+  {
+    title: 'Replicate',
+    category: 'AI',
+    route: {
+      light: '/library/replicate_light.svg',
+      dark: '/library/replicate_dark.svg'
+    },
+    wordmark: {
+      light: '/library/replicate-wordmark_light.svg',
+      dark: '/library/replicate-wordmark_dark.svg'
+    },
+    url: 'https://replicate.com/'
+  },
+  {
+    title: 'Markdown',
+    category: 'Language',
+    route: {
+      light: '/library/markdown-light.svg',
+      dark: '/library/markdown-dark.svg'
+    },
+    url: 'https://www.markdownguide.org/'
+  },
+  {
+    title: 'Movie Web',
+    category: 'Entertainment',
+    route: '/library/movie-web.svg',
+    url: 'https://movie-web.app/'
+  },
+  {
+    title: 'Radix UI',
+    category: 'Library',
+    route: {
+      light: '/library/radix-ui_light.svg',
+      dark: '/library/radix-ui_dark.svg'
+    },
+    url: 'https://www.radix-ui.com/'
+  },
+  {
+    title: 'Web.dev',
+    category: 'Education',
+    route: '/library/webdev.svg',
+    url: 'https://web.dev/'
+  },
+  {
+    title: 'SWR',
+    category: 'Library',
+    route: {
+      light: '/library/swr-light.svg',
+      dark: '/library/swr-dark.svg'
+    },
+    url: 'https://swr.vercel.app/'
+  },
+  {
+    title: 'Refine',
+    category: 'Framework',
+    route: {
+      light: '/library/refine_dark.svg',
+      dark: '/library/refine_light.svg'
+    },
+    url: 'https://refine.dev/'
+  },
+  {
+    title: 'Youtube Music',
+    category: 'Music',
+    route: '/library/youtube_music.svg',
+    wordmark: {
+      light: '/library/youtube_music_wordmark_light.svg',
+      dark: '/library/youtube_music_wordmark_dark.svg'
+    },
+    url: 'https://music.youtube.com/'
+  },
+  {
+    title: 'TIDAL',
+    category: 'Music',
+    route: {
+      light: '/library/tidal_light.svg',
+      dark: '/library/tidal_dark.svg'
+    },
+    wordmark: {
+      light: '/library/tidal_wordmark_light.svg',
+      dark: '/library/tidal_wordmark_dark.svg'
+    },
+    url: 'https://tidal.com/'
+  },
+  {
+    title: 'OBS',
+    category: 'Software',
+    route: '/library/obs.svg',
+    url: 'Website'
+  },
+  {
+    title: 'Stack Overflow',
+    category: 'Software',
+    route: '/library/stackoverflow.svg',
+    wordmark: '/library/stackoverflow_wordmark.svg',
+    url: 'https://stackoverflow.com/'
+  },
+  {
+    title: 'TikTok',
+    category: 'Social',
+    route: '/library/tiktok.svg',
+    url: 'https://www.tiktok.com/'
+  },
+  {
+    title: 'Ngrok',
+    category: 'Software',
+    route: {
+      dark: '/library/ngrok-dark.svg',
+      light: '/library/ngrok-light.svg'
+    },
+    url: 'https://ngrok.com'
+  },
+  {
+    title: 'Lemon Squeezy',
+    category: 'Software',
+    route: '/library/lemonsqueezy.svg',
+    url: 'https://www.lemonsqueezy.com'
+  },
+  {
+    title: 'Asana',
+    category: 'Software',
+    route: '/library/asana-logo.svg',
+    wordmark: {
+      dark: '/library/asana-wordmark-dark.svg',
+      light: '/library/asana-wordmark-light.svg'
+    },
+    url: 'https://asana.com'
+  },
+  {
+    title: 'Zoom',
+    category: 'Software',
+    route: '/library/zoom.svg',
+    url: 'https://zoom.us/'
+  },
+  {
+    title: 'Tina',
+    category: 'CMS',
+    route: '/library/tina.svg',
+    wordmark: '/library/tina_wordmark.svg',
+    url: 'https://tina.io/'
+  },
+  {
+    title: 'Vercel',
+    category: ['Hosting', 'Vercel'],
+    route: {
+      light: '/library/vercel.svg',
+      dark: '/library/vercel_dark.svg'
+    },
+    wordmark: {
+      light: '/library/vercel_wordmark.svg',
+      dark: '/library/vercel_wordmark_dark.svg'
+    },
+    url: 'https://vercel.com/'
+  },
+  {
+    title: 'Next.js',
+    category: ['Framework', 'Vercel'],
+    route: '/library/nextjs_icon_dark.svg',
+    wordmark: {
+      light: '/library/nextjs_logo_light.svg',
+      dark: '/library/nextjs_logo_dark.svg'
+    },
+    url: 'https://nextjs.org/'
+  },
+  {
+    title: 'Mistral AI',
+    category: 'AI',
+    route: '/library/mistral-ai_logo.svg',
+    wordmark: '/library/mistral-ai_wordmark.svg',
+    url: 'https://mistral.ai/'
+  },
+  {
+    title: 'Hugging Face',
+    category: 'AI',
+    route: '/library/hugging_face.svg',
+    url: 'https://huggingface.co/'
+  },
+  {
+    title: 'Node.js',
+    category: 'Library',
+    route: '/library/nodejs.svg',
+    url: 'https://nodejs.org/'
+  },
+  {
+    title: 'Raindrop.io',
+    category: 'Software',
+    route: '/library/raindrop.svg',
+    url: 'https://raindrop.io/'
+  },
+  {
+    title: 'Microsoft Todo',
+    category: 'Software',
+    route: '/library/microsoft-todo.svg',
+    url: 'https://to-do.office.com/'
   }
 ];

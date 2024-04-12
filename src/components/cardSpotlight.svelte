@@ -1,13 +1,13 @@
 <script lang="ts">
-  let div: HTMLDivElement;
+  let domElement: HTMLElement;
   let focused = false;
   let position = { x: 0, y: 0 };
   let opacity = 0;
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (!div || focused) return;
+    if (!domElement || focused) return;
 
-    const rect = div.getBoundingClientRect();
+    const rect = domElement.getBoundingClientRect();
 
     position = {
       x: e.clientX - rect.left,
@@ -34,9 +34,9 @@
   };
 </script>
 
-<div
-  aria-hidden="true"
-  bind:this={div}
+<!--Se quito el aria-hidden="true" para que se pueda leer el contenido del card con el lector de pantalla  -->
+<article
+  bind:this={domElement}
   on:mousemove={handleMouseMove}
   on:focus={handleFocus}
   on:blur={handleBlur}
@@ -45,11 +45,11 @@
   class="relative flex items-center justify-center overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
 >
   <div
-    class="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+    class="pointer-events-none absolute transform-gpu -inset-px opacity-0 transition duration-300"
     style={`
 			opacity: ${opacity};
 			background: radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(97, 97, 97, 0.1), transparent 40%);
 		`}
   />
   <slot />
-</div>
+</article>

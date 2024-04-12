@@ -15,7 +15,8 @@ export type tCategory =
   | 'Language'
   | 'Education'
   | 'Design'
-  | 'Typing'
   | 'Community'
   | 'Marketplace'
-  | 'Fintech';
+  | 'Fintech'
+  | 'Music'
+  | 'Vercel';

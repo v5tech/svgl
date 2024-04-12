@@ -13,7 +13,7 @@ SVGL API is a RESTFul API that allows you to get all the information of the SVGs
 
 ## Limitations
 
-The API is currently open to everyone and does not require any authentication. However, to prevent abusive use of the API, there is a limit to the number of requests: **5 requests** with **60s** cooldown.
+The API is currently open to everyone and does not require any authentication. However, to prevent abusive use of the API, there is a limit to the number of requests.
 
 ## Base URL
 
@@ -27,29 +27,30 @@ https://svgl.app/api/categories
 
 ## Typescript usage
 
-- For SVGs:
-
-```ts
-export interface svg {
-  id: number;
-  title: string;
-  category: string;
-  route:
-    | string
-    | {
-        dark: string;
-        light: string;
-      };
-  url: string;
-}
-```
-
 - For categories:
 
 ```ts
-export interface category {
+export interface Category {
   category: string;
   total: number;
+}
+```
+
+- For SVGs:
+
+```ts
+type ThemeOptions = {
+  light: string;
+  dark: string;
+};
+
+export interface iSVG {
+  id: number;
+  title: string;
+  category: string | string[];
+  route: string | ThemeOptions;
+  wordmark?: string | ThemeOptions;
+  url: string;
 }
 ```
 

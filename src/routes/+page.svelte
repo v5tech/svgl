@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { iSVG } from '@/types/svg';
   import { cn } from '@/utils/cn';
+  import { queryParam } from 'sveltekit-search-params';
 
   // Get all svgs:
   import { svgsData } from '@/data';
@@ -13,15 +14,19 @@
   import Grid from '@/components/grid.svelte';
   import NotFound from '@/components/notFound.svelte';
 
+  // URL params
+  const searchParam = queryParam('search');
+
   // Icons:
   import { ArrowDown, ArrowDownUpIcon, ArrowUpDownIcon } from 'lucide-svelte';
+  import { buttonStyles } from '@/ui/styles';
 
   let sorted: boolean = false;
   let isFirstLoad: boolean = true;
   let showAll: boolean = false;
 
   // Search:
-  let searchTerm = '';
+  let searchTerm = $searchParam || '';
   let filteredSvgs: iSVG[] = [];
 
   // Order by last added:
@@ -42,6 +47,7 @@
 
   // Search svgs:
   const searchSvgs = () => {
+    $searchParam = searchTerm || null;
     loadSvgs();
     filteredSvgs = allSvgs.filter((svg: iSVG) => {
       let svgTitle = svg.title.toLowerCase();
@@ -79,7 +85,11 @@
     });
   };
 
-  loadSvgs();
+  if ($searchParam) {
+    searchSvgs();
+  } else {
+    loadSvgs();
+  }
 </script>
 
 <svelte:head>
@@ -97,7 +107,7 @@
   <div class="flex items-center justify-end mb-4">
     <button
       class={cn(
-        'flex items-center justify-center space-x-1 rounded-md px-3 py-1.5 text-sm font-medium hover:opacity-80 transition-opacity',
+        'flex items-center justify-center space-x-1 rounded-md px-3 py-1.5 text-sm font-medium opacity-80 hover:opacity-100 transition-opacity',
         filteredSvgs.length === 0 && 'hidden'
       )}
       on:click={() => sort()}
@@ -117,15 +127,14 @@
   </Grid>
   {#if filteredSvgs.length > 30 && !showAll}
     <div class="flex items-center justify-center mt-4">
-      <button
-        class="flex items-center space-x-2 rounded-md border border-neutral-300 p-2 duration-100 hover:bg-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-700/40"
-        on:click={() => (showAll = true)}
-      >
-        <ArrowDown size={16} strokeWidth={2} />
-        <span>Load All SVGs</span>
-        <span class="opacity-70">
-          ({filteredSvgs.length - 30} more)
-        </span>
+      <button class={buttonStyles} on:click={() => (showAll = true)}>
+        <div class="flex items-center space-x-2 relative">
+          <ArrowDown size={16} strokeWidth={2} />
+          <span>Load All SVGs</span>
+          <span class="opacity-70">
+            ({filteredSvgs.length - 30} more)
+          </span>
+        </div>
       </button>
     </div>
   {/if}
