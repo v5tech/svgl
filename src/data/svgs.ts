@@ -166,12 +166,6 @@ export const svgs: iSVG[] = [
     url: 'https://firebase.google.com/'
   },
   {
-    title: 'Supabase',
-    category: 'Database',
-    route: '/library/supabase.svg',
-    url: 'https://supabase.com/'
-  },
-  {
     title: 'Vite.js',
     category: 'Compiler',
     route: '/library/vitejs.svg',
@@ -440,7 +434,7 @@ export const svgs: iSVG[] = [
   },
   {
     title: 'jQuery',
-    category: 'Language',
+    category: 'Library',
     route: {
       light: '/library/jquery.svg',
       dark: '/library/jquery_dark.svg'
@@ -2578,5 +2572,33 @@ export const svgs: iSVG[] = [
     category: 'Software',
     route: '/library/microsoft-todo.svg',
     url: 'https://to-do.office.com/'
+  },
+  {
+    title: 'Supabase',
+    category: 'Database',
+    route: '/library/supabase.svg',
+    url: 'https://supabase.com/',
+    wordmark: {
+      light: '/library/supabase_wordmark_light.svg',
+      dark: '/library/supabase_wordmark_dark.svg'
+    }
+  },
+  {
+    title: 'Gleam',
+    category: 'Language',
+    route: '/library/gleam.svg',
+    url: 'https://gleam.run/'
+  },
+  {
+    title: 'Flowbite',
+    category: 'Framework',
+    route: '/library/flowbite.svg',
+    url: 'https://flowbite.com/'
+  },
+  {
+    title: "Hume AI",
+    category: "AI",
+    route: "/library/hume-ai.svg",
+    url: "https://hume.ai/",
   }
 ];
