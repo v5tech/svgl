@@ -2,6 +2,29 @@ import type { iSVG } from '../types/svg';
 
 export const svgs: iSVG[] = [
   {
+    title: 'Mercado Pago',
+    category: 'Payment',
+    route: '/library/mercado-pago.svg',
+    wordmark: '/library/mercado-pago-wordmark.svg',
+    url: 'https://www.mercadopago.com/developers/'
+  },
+  {
+    title: 'Basewell',
+    category: ['AI', 'Software'],
+    route: '/library/basewell.svg',
+    url: 'https://www.basewell.com/'
+  },
+  {
+    title: 'ahooks',
+    category: 'Library',
+    route: '/library/ahooks.svg',
+    wordmark: {
+      light: '/library/ahooks-wordmark-light.svg',
+      dark: '/library/ahooks-wordmark-dark.svg'
+    },
+    url: 'https://ahooks.js.org/'
+  },
+  {
     title: 'Discord',
     category: 'Software',
     route: '/library/discord.svg',
@@ -476,7 +499,7 @@ export const svgs: iSVG[] = [
   },
   {
     title: 'Arc',
-    category: 'Fintech',
+    category: 'Software',
     route: {
       light: '/library/arc_fintech_light.svg',
       dark: '/library/arc_fintech_dark.svg'
@@ -2596,9 +2619,43 @@ export const svgs: iSVG[] = [
     url: 'https://flowbite.com/'
   },
   {
-    title: "Hume AI",
-    category: "AI",
-    route: "/library/hume-ai.svg",
-    url: "https://hume.ai/",
+    title: 'Hume AI',
+    category: 'AI',
+    route: '/library/hume-ai.svg',
+    url: 'https://hume.ai/'
+  },
+  {
+    title: 'Resend',
+    category: 'Software',
+    url: 'https://resend.com/',
+    route: {
+      light: '/library/resend-icon-black.svg',
+      dark: '/library/resend-icon-white.svg'
+    },
+    wordmark: {
+      light: '/library/resend-wordmark-black.svg',
+      dark: '/library/resend-wordmark-white.svg'
+    }
+  },
+  {
+    title: 'Layers',
+    category: 'Design',
+    route: {
+      light: '/library/layers_light.svg',
+      dark: '/library/layers_dark.svg'
+    },
+    url: 'https://layers.to/'
+  },
+  {
+    title: 'Exome',
+    category: 'Library',
+    route: '/library/exome.svg',
+    url: 'https://exome.dev/'
+  },
+  {
+    title: 'Poper',
+    category: 'AI',
+    route: '/library/poper.svg',
+    url: 'https://www.poper.ai'
   }
 ];
