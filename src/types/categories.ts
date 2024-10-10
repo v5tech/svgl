@@ -12,6 +12,7 @@ export type tCategory =
   | 'Database'
   | 'Compiler'
   | 'Crypto'
+  | 'Cybersecurity'
   | 'Social'
   | 'Entertainment'
   | 'Browser'
@@ -23,4 +24,5 @@ export type tCategory =
   | 'Music'
   | 'Vercel'
   | 'Google'
-  | 'Payment';
+  | 'Payment'
+  | 'void(0)';
